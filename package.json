@@ -1,0 +1,23 @@
+{
+  "name": "cypher",
+  "version": "0.0.0",
+  "description": "Valorant Discord Stat Botr",
+  "main": "dist/bot.js",
+  "repository": "https://github.com/Vobe-io/cypher",
+  "author": {
+    "name": "Vobe",
+    "email": "cypher@vobe.io",
+    "url": "https://cypher.vobe.io"
+  },
+  "contributors": [
+    "Aaron Geiger <aaron@vobe.io> (https://vobe.io)",
+    "Timo Aeckerle <timo@vobe.io> (https://vobe.io)"
+  ],
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "start": "node dist/bot.js",
+    "compile": "tsc",
+    "start:watch": "nodemon --exec yarn compile && yarn start"
+  }
+}
