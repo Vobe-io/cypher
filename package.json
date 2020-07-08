@@ -18,6 +18,12 @@
   "scripts": {
     "start": "node dist/bot.js",
     "compile": "tsc",
-    "start:watch": "nodemon --exec yarn compile && yarn start"
+    "start:watch": "nodemon -e js,ts,json,.token --exec \"yarn compile && yarn start\" --ignore \"dist/\""
+  },
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^14.0.20",
+    "chalk": "^4.1.0",
+    "discord.js": "^12.2.0"
   }
 }
