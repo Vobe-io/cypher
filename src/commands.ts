@@ -25,10 +25,10 @@ abstract class Command {
 }
 
 class CommandHandler {
-  private commands: Command[] = [];
-  prefix: String;
+  commands: Command[] = [];
+  prefix: string;
 
-  constructor(prefix: String) {
+  constructor(prefix: string) {
     this.prefix = prefix ?? "!";
   }
 

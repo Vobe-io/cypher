@@ -21,3 +21,5 @@ if (token === undefined || token.length < 1) {
   process.exit(1);
 }
 client.login(token);
+
+export { cmdHandler as CommandHandler };
