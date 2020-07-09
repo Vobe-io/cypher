@@ -3,7 +3,12 @@
     "charset": "utf-8",
     "baseUrl": "src",
     "outDir": "dist",
-    "allowJs": true
+    "sourceMap": true,
+    "allowJs": true,
+    "noImplicitAny": true,
+    "paths": {
+      "~/*": ["*"]
+    }
   },
   "exclude": ["node_modules", "dist"]
 }

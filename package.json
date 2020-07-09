@@ -16,14 +16,22 @@
   "license": "MPL-2.0",
   "private": true,
   "scripts": {
-    "start": "node dist/bot.js",
-    "compile": "tsc",
-    "start:watch": "nodemon -e js,ts,json,.token --exec \"yarn compile && yarn start\" --ignore \"dist/\""
+    "start": "node dist/bot.bundle.js",
+    "bundle:production": "webpack --mode=production",
+    "bundle:development": "webpack --mode=development",
+    "start:watch": "nodemon -e * --exec \"yarn bundle:development && yarn start\" --ignore \"dist/\""
   },
   "dependencies": {
     "@types/chalk": "^2.2.0",
     "@types/node": "^14.0.20",
     "chalk": "^4.1.0",
     "discord.js": "^12.2.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^8.0.0",
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.3.0"
   }
 }
