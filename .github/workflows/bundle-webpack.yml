@@ -1,0 +1,23 @@
+
+name: Webpack build
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-react:
+    name: "Webpack Bundle"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+          registry-url: 'https://npm.pkg.github.com'
+      - name: "Yarn Install"
+        run: yarn install
+          
+      - name: "Yarn Bundle:Production"
+        run: yarn bundle:production
